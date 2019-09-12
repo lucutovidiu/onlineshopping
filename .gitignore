@@ -1,0 +1,4 @@
+#dev
+/.next
+/node_modules
+/.env
