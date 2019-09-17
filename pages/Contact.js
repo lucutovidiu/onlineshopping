@@ -6,7 +6,7 @@ import React from "react";
 // import Link from "next/link";
 import Navbar from "../frontend/components/navbar/navbar";
 
-export default function About() {
+export default function Contact() {
   return (
     <>
       <Navbar></Navbar>

@@ -9,8 +9,8 @@ import useMobileStyles from "./Mobile_JSS_NavBar";
 
 const menu_items = {
   Home: "/",
-  Fashion: "/Fashion",
-  Other: "/Other",
+  Contact: "/Contact",
+  Discounts: "/Discounts",
   SignIn: "/Login"
 };
 
@@ -43,11 +43,11 @@ const Navbar = () => {
             <Link href={menu_items.Home}>
               <a className={desktopClasses.nav_link}>Home</a>
             </Link>
-            <Link href={menu_items.Fashion}>
-              <a className={desktopClasses.nav_link}>Fashion</a>
+            <Link href={menu_items.Discounts}>
+              <a className={desktopClasses.nav_link}>Discounts</a>
             </Link>
-            <Link href={menu_items.Other}>
-              <a className={desktopClasses.nav_link}>Other</a>
+            <Link href={menu_items.Contact}>
+              <a className={desktopClasses.nav_link}>Contact</a>
             </Link>
           </div>
           <div className="search_bar">

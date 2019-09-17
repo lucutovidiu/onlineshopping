@@ -29,6 +29,7 @@ const useShopByPictureStyles = makeStyles(theme => ({
       },
       "& .picshop_product_title": {
         position: "absolute",
+        textTransform: "uppercase",
         top: 0,
         left: "50%",
         transform: "translate(-50%,-60%)",
