@@ -6,7 +6,7 @@ const compression = require("compression");
 const dev = process.env.NODE_ENV.trim() != "production";
 const nextApp = next({ dev });
 const nextRoutesHandler = nextApp.getRequestHandler();
-const serverPort = 3000;
+const SERVER_PORT = process.env.PORT || 3000;
 
 nextApp
   .prepare()
@@ -17,8 +17,8 @@ nextApp
       return nextRoutesHandler(req, res);
     });
 
-    expressApp.listen(serverPort, () => {
-      console.log("http://localhost:" + serverPort);
+    expressApp.listen(SERVER_PORT, () => {
+      console.log("" + SERVER_PORT);
     });
   })
   .catch(console.log);
