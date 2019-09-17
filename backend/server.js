@@ -1,4 +1,4 @@
-require("dotenv").config();
+process.env.PORT || require("dotenv").config();
 const next = require("next");
 const express = require("express");
 const compression = require("compression");
