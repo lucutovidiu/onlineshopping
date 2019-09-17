@@ -7,11 +7,28 @@ import React from "react";
 import ShopByPicture from "../frontend/components/ShopByPicture";
 import Navbar from "../frontend/components/navbar/navbar";
 
+const shopbypictureArray = [
+  {
+    cathegory: "Scarfs",
+    backgroundImage: "../../../static/img/fashionPic/1.jpg"
+  },
+  {
+    cathegory: "Dresses",
+    backgroundImage: "../../../static/img/fashionPic/2.jpg"
+  },
+  {
+    cathegory: "Jumpers",
+    backgroundImage: "../../../static/img/fashionPic/3.jpg"
+  }
+];
+
 export default function Index() {
   return (
     <>
       <Navbar></Navbar>
-      <ShopByPicture />
+      {shopbypictureArray.map((cathegory, key) => {
+        return <ShopByPicture key={key} pictureData={cathegory} />;
+      })}
     </>
     // <Container maxWidth="sm">
     //   <Box my={4}>

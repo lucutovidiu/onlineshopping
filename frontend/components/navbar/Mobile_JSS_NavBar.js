@@ -1,10 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
-let login_navbar_color = "rgb(172, 172, 172)";
-let login_navbar_border = "rgb(218, 214, 214)";
-let navbar_link_color = "rgb(46, 44, 44)";
-
-const useMobileStyles = makeStyles({
+const useMobileStyles = makeStyles(theme => ({
   mobile_main_navbar_wrapper: {
     position: "sticky",
     zIndex: "15",
@@ -12,9 +8,9 @@ const useMobileStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     padding: "0.8rem 1rem",
-    backgroundColor: "#fff",
-    borderTop: `1px solid ${login_navbar_border}`,
-    borderBottom: `1px solid ${login_navbar_border}`,
+    backgroundColor: theme.palette.background.default,
+    borderTop: `1px solid ${theme.palette.navBar.navBarBorders}`,
+    borderBottom: `1px solid ${theme.palette.navBar.navBarBorders}`,
     marginBottom: "1rem",
     ["@media all and (min-width: 905px)"]: {
       display: "none"
@@ -34,9 +30,9 @@ const useMobileStyles = makeStyles({
     },
     "& .mobile_menu_btn": {
       fontSize: "1rem",
-      color: "rgb(112, 105, 105)"
+      color: theme.palette.navBar.link
     }
   }
-});
+}));
 
 export default useMobileStyles;

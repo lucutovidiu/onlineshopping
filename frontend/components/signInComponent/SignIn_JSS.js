@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
 
-let link_color = "rgb(41, 41, 185)";
-
 const useSignInStyles = makeStyles(theme => ({
   "@keyframes animate_popup": {
     from: {
@@ -30,8 +28,8 @@ const useSignInStyles = makeStyles(theme => ({
       position: "absolute",
       left: "50%",
       transform: "translate(-50%, 5%)",
-      backgroundColor: "#f6f9fa",
-      boxShadow: "0px 1px 3px 0px gray",
+      backgroundColor: theme.palette.signIn.background,
+      boxShadow: `0px 1px 3px 0px ${theme.palette.signIn.boxShadow}`,
       animation: "$animate_popup 1s forwards",
       ["@media screen and (max-width: 571px)"]: {
         width: "85%"
@@ -53,7 +51,7 @@ const useSignInStyles = makeStyles(theme => ({
         },
         "& .signin_signup_title a": {
           textDecoration: "none",
-          color: link_color,
+          color: theme.palette.signIn.link,
           fontWeight: "400",
           paddingLeft: "0.5rem"
         }
@@ -66,7 +64,7 @@ const useSignInStyles = makeStyles(theme => ({
           padding: "0rem 0 1rem 0",
           "& a": {
             textDecoration: "none",
-            color: link_color
+            color: theme.palette.signIn.link
           }
         },
         "& .signin_with_facebook": {

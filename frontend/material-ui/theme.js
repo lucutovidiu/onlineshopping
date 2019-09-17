@@ -15,6 +15,28 @@ const theme = createMuiTheme({
     },
     background: {
       default: "#fff"
+    },
+    signInBar: {
+      link: "rgb(172, 172, 172)"
+    },
+    navBar: {
+      link: "rgb(112, 105, 105)",
+      linkBorderTop: "rgb(112, 105, 105)",
+      linkHover: "rgb(46, 44, 44)",
+      iconsHover: "rgb(218, 214, 214)",
+      navBarBorders: "rgb(218, 214, 214)"
+    },
+    shopByPicture: {
+      borders: "rgb(112, 105, 105)",
+      title: "#9b59b6",
+      titleShadow: "black",
+      shopNowBtnBackground: "#ecf0f1",
+      shopNowBtnBorder: "gray"
+    },
+    signIn: {
+      background: "#f6f9fa",
+      boxShadow: "gray",
+      link: "rgb(41, 91, 201)"
     }
   }
 });

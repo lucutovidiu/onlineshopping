@@ -1,10 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 
-let login_navbar_color = "rgb(172, 172, 172)";
-let login_navbar_border = "rgb(218, 214, 214)";
-let navbar_link_color = "rgb(46, 44, 44)";
-
-const useDesktopStyles = makeStyles({
+const useDesktopStyles = makeStyles(theme => ({
   login_navbar_warpper: {
     padding: "0.5rem",
     fontSize: "0.7rem",
@@ -13,14 +9,14 @@ const useDesktopStyles = makeStyles({
     justifyContent: "flex-end",
     "& a": {
       textDecoration: "none",
-      color: login_navbar_color,
-      borderRight: `1px solid ${login_navbar_color}`,
+      color: theme.palette.signInBar.link,
+      borderRight: `1px solid ${theme.palette.signInBar.link}`,
       padding: " 0 0.5rem",
       "&:last-child": {
         borderRight: "none"
       },
       "&:hover,&:active": {
-        color: navbar_link_color
+        color: theme.palette.signInBar.linkHover
       }
     }
   },
@@ -31,16 +27,16 @@ const useDesktopStyles = makeStyles({
     display: "flex",
     padding: "0.5rem 1rem",
     marginBottom: "1rem",
-    backgroundColor: "#fff",
-    borderTop: `1px solid ${login_navbar_border}`,
-    borderBottom: `1px solid ${login_navbar_border}`,
+    backgroundColor: theme.palette.background.default,
+    borderTop: `1px solid ${theme.palette.navBar.navBarBorders}`,
+    borderBottom: `1px solid ${theme.palette.navBar.navBarBorders}`,
     ["@media all and (max-width: 905px)"]: {
       display: "none"
     },
     "& .menu_left": {
       display: "flex",
       flexBasis: "88%",
-      borderRight: `1px solid ${login_navbar_border}`,
+      borderRight: `1px solid ${theme.palette.navBar.navBarBorders}`,
       "& .navbar_main_menu-list": {
         flex: 2,
         display: "flex",
@@ -71,18 +67,18 @@ const useDesktopStyles = makeStyles({
   nav_link: {
     textDecoration: "none",
     padding: "0 1rem",
-    color: navbar_link_color,
+    color: theme.palette.navBar.linkHover,
     fontSize: "1rem",
     fontFamily: "Lato Black",
     position: "relative",
-    color: "rgb(112, 105, 105)",
+    color: theme.palette.navBar.link,
     "&:hover, &:active": {
-      color: navbar_link_color
+      color: theme.palette.navBar.linkHover
     },
     "&::after": {
       content: `""`,
       position: "absolute",
-      borderTop: "3px solid rgb(112, 105, 105)",
+      borderTop: `3px solid ${theme.palette.navBar.linkBorderTop}`,
       width: "0%",
       top: "-22px",
       left: "10%",
@@ -100,11 +96,11 @@ const useDesktopStyles = makeStyles({
     alignItems: "center",
     "& svg": {
       "&:hover": {
-        color: login_navbar_color,
+        color: theme.palette.navBar.iconsHover,
         cursor: "pointer"
       }
     }
   }
-});
+}));
 
 export default useDesktopStyles;
