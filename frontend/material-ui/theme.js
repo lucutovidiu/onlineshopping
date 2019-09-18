@@ -37,6 +37,14 @@ const theme = createMuiTheme({
       background: "#f6f9fa",
       boxShadow: "gray",
       link: "rgb(41, 91, 201)"
+    },
+    circleShapeDisscounts: {
+      outerBorder: "gray",
+      pictureFilterColor: "rgba(0,0,0,0.3)",
+      moreInfoColor: "#9b59b6",
+      shapeFooterBackground: "#EAEAEA",
+      shapeFooterBackgroundBoxShaddow: "gray",
+      priceBtnColor: "#3498db"
     }
   }
 });

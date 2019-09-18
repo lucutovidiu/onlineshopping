@@ -6,14 +6,18 @@ const index = ({ disscountedItem }) => {
   const classes = useCircleShapeStyles();
   return (
     <div className={classes.circle_shape_wrapper}>
-      <img
-        className="circle_shape_background"
-        src={disscountedItem.imageSrc}
-        alt="image title"
-      />
+      <div className="circle_shape_header">
+        <img
+          className="circle_shape_background"
+          src={disscountedItem.imageSrc}
+          alt="image title"
+        />
+        <div className="more_info_btn">More Info</div>
+      </div>
       <div className="circle_shape_footer">
         <Typography className="sale_text" variant="h6" component="h1">
-          {disscountedItem.disscountValue} sale
+          Now Only: {disscountedItem.disscountValue}{" "}
+          {disscountedItem.sellingCurrency}
         </Typography>
         <Typography className="buy_now" variant="h6" component="h1">
           Buy Now

@@ -38,7 +38,11 @@ const useShopByPictureStyles = makeStyles(theme => ({
         letterSpacing: "3px",
         fontWeight: "bold",
         fontSize: "3rem",
-        width: "100%"
+        width: "100%",
+        ["@media all and (max-width: 520px)"]: {
+          fontSize: "1.8rem",
+          transform: "translate(-50%,-50%)"
+        }
       },
       "& .picshop_picture": {
         width: "100%",
@@ -56,7 +60,11 @@ const useShopByPictureStyles = makeStyles(theme => ({
         padding: "1.2rem",
         border: `2px solid ${theme.palette.shopByPicture.shopNowBtnBorder}`,
         letterSpacing: "2px",
-        cursor: "pointer"
+        cursor: "pointer",
+        ["@media all and (max-width: 520px)"]: {
+          fontSize: "1.5rem",
+          padding: "0.8rem 0.5rem"
+        }
       }
     }
   }

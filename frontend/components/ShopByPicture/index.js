@@ -20,7 +20,12 @@ const ShopByPicture = ({ pictureData }) => {
           Shop by {pictureData.cathegory}
         </Typography>
 
-        <Typography className="picshop_shop_now" variant="h1" component="h2">
+        <Typography
+          className="picshop_shop_now"
+          variant="h1"
+          component="h2"
+          noWrap
+        >
           Shop Now
         </Typography>
       </div>

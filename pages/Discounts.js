@@ -5,15 +5,18 @@ import useCircleShapePageStyles from "../frontend/components/circleShapeDiscount
 
 const disscountsArray = [
   {
-    disscountValue: "40%",
+    disscountValue: "12",
+    sellingCurrency: "EUR",
     imageSrc: "../../../static/img/disscounts/1.jpg"
   },
   {
-    disscountValue: "30%",
+    disscountValue: "30",
+    sellingCurrency: "EUR",
     imageSrc: "../../../static/img/disscounts/2.jpg"
   },
   {
-    disscountValue: "10%",
+    disscountValue: "20",
+    sellingCurrency: "EUR",
     imageSrc: "../../../static/img/disscounts/3.jpg"
   }
 ];
