@@ -3,12 +3,19 @@ import Link from "next/link";
 import { MenuNavItems } from "./MenuNavItems";
 import useMobileStyles from "./Mobile_JSS_NavBar";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Grid } from "@material-ui/core";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import { Grid, Typography, Box } from "@material-ui/core";
+import LanguageIcon from "@material-ui/icons/Language";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const MobileNavMenu = () => {
   const mobileClasses = useMobileStyles();
   // const { Home, Contact, SignIn, Discounts } = MenuNavItems();
   const [showDropDown, setShowDropDown] = React.useState(false);
+  function toggleMenu() {
+    setShowDropDown(state => !state);
+  }
   // console.log(desktopClasses.login_navbar_warpper);
   return (
     <>
@@ -18,14 +25,15 @@ const MobileNavMenu = () => {
             <a>Ovi Logo</a>
           </Link>
         </div>
-        <div
-          className="mobile_menu_btn"
-          onClick={() => {
-            setShowDropDown(state => !state);
-          }}
-        >
+        <div className="mobile_menu_btn" onClick={toggleMenu}>
           <MenuIcon />
           <span>MENU</span>
+        </div>
+        <div className="shopping_cart_menu">
+          <FavoriteBorderIcon fontSize="large" />
+          <ShoppingCartIcon fontSize="large" />
+          <LanguageIcon fontSize="large" />
+          <Typography>EN</Typography>
         </div>
         <div
           className={
@@ -43,6 +51,9 @@ const MobileNavMenu = () => {
               );
             })}
           </Grid>
+          <Box onClick={toggleMenu} textAlign="center">
+            <ExpandLessIcon />
+          </Box>
         </div>
       </nav>
     </>

@@ -6,7 +6,7 @@ const useMobileStyles = makeStyles(theme => ({
     zIndex: "15",
     top: 0 /* required */,
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     padding: "0.8rem 1rem",
     backgroundColor: theme.palette.background.default,
     borderTop: `1px solid ${theme.palette.navBar.navBarBorders}`,
@@ -19,7 +19,7 @@ const useMobileStyles = makeStyles(theme => ({
       fontFamily: "HandWriting",
       fontSize: "2rem",
       fontWeight: "normal",
-      padding: "0 2rem",
+      padding: "0 1rem",
       left: 0,
       top: 0,
       "& a": {
@@ -36,7 +36,8 @@ const useMobileStyles = makeStyles(theme => ({
       justifyContent: "space-around",
       borderLeft: "1px dashed pink",
       borderRight: "1px dashed pink",
-      cursor: "pointer"
+      cursor: "pointer",
+      marginRight: "2rem"
     },
     "& .dropDownMenu": {
       position: "absolute",
@@ -60,6 +61,20 @@ const useMobileStyles = makeStyles(theme => ({
           color: theme.palette.navBar.link,
           textDecoration: "none"
         }
+      }
+    },
+    "& .shopping_cart_menu": {
+      position: "absolute",
+      right: "0",
+      float: "left",
+      display: "flex",
+      "& > *": {
+        paddingRight: "0.6rem",
+        paddingBottom: "0.5rem"
+      },
+      "& :last-child": {
+        // backgroundColor: "red",
+        paddingTop: "0.2rem"
       }
     }
   },

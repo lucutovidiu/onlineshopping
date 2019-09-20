@@ -8,7 +8,7 @@ const useShopByPictureStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: "2rem",
+    paddingTop: "1rem",
     "& .picshop_pic_wrapper": {
       position: "relative",
       display: "inline-block",
