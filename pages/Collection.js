@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <>
       <Navbar></Navbar>
-      this is fashion
+      Work in progress
     </>
     // <Container maxWidth="sm">
     //   <Box my={4}>

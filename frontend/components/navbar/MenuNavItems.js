@@ -9,17 +9,17 @@ export function MenuNavItems() {
     },
     {
       navItemName: {
+        en: "Collection",
+        ro: "Colectie"
+      },
+      navItemLink: "/Collection"
+    },
+    {
+      navItemName: {
         en: "Offers",
         ro: "Oferte"
       },
       navItemLink: "/Discounts"
-    },
-    {
-      navItemName: {
-        en: "Contact",
-        ro: "Contacteaza-ne"
-      },
-      navItemLink: "/Contact"
     }
   ];
 }

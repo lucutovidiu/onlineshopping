@@ -7,6 +7,7 @@ import React from "react";
 import ShopByPicture from "../frontend/components/ShopByPicture";
 import Navbar from "../frontend/components/navbar/navbar";
 import CaroselIndex from "../frontend/components/Carosel/CaroselIndex";
+import FooterIndex from "../frontend/components/Footer/FooterIndex";
 
 const shopbypictureArray = [
   {
@@ -63,6 +64,7 @@ export default function Index() {
       {shopbypictureArray.map((cathegory, key) => {
         return <ShopByPicture key={key} pictureData={cathegory} />;
       })}
+      <FooterIndex />
     </>
     // <Container maxWidth="sm">
     //   <Box my={4}>
