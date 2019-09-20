@@ -11,7 +11,7 @@ const useDesktopStyles = makeStyles(theme => ({
       textDecoration: "none",
       color: theme.palette.signInBar.link,
       borderRight: `1px solid ${theme.palette.signInBar.link}`,
-      padding: " 0 0.5rem",
+      padding: "0 0.5rem",
       "&:last-child": {
         borderRight: "none"
       },
@@ -26,7 +26,6 @@ const useDesktopStyles = makeStyles(theme => ({
     top: 0 /* required */,
     display: "flex",
     padding: "0.5rem 1rem",
-    marginBottom: "1rem",
     backgroundColor: theme.palette.background.default,
     borderTop: `1px solid ${theme.palette.navBar.navBarBorders}`,
     borderBottom: `1px solid ${theme.palette.navBar.navBarBorders}`,
@@ -90,15 +89,19 @@ const useDesktopStyles = makeStyles(theme => ({
     }
   },
   menu_right: {
+    // border: "1px solid pink",
     display: "flex",
     justifyContent: "space-around",
-    width: "100px",
+    width: "160px",
     alignItems: "center",
     "& svg": {
       "&:hover": {
         color: theme.palette.navBar.iconsHover,
         cursor: "pointer"
       }
+    },
+    "& p": {
+      fontWeight: "bold"
     }
   }
 }));

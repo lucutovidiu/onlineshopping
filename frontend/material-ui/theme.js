@@ -24,7 +24,8 @@ const theme = createMuiTheme({
       linkBorderTop: "rgb(112, 105, 105)",
       linkHover: "rgb(46, 44, 44)",
       iconsHover: "rgb(218, 214, 214)",
-      navBarBorders: "rgb(218, 214, 214)"
+      navBarBorders: "rgb(218, 214, 214)",
+      mobileDropdown: "#ecf0f1"
     },
     shopByPicture: {
       borders: "rgb(112, 105, 105)",

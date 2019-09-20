@@ -27,8 +27,8 @@ const Discounts = () => {
     <>
       <Navbar></Navbar>
       <div className={classes.disscountPageWrapper}>
-        {disscountsArray.map(dis => {
-          return <CircleShapeDiscount disscountedItem={dis} />;
+        {disscountsArray.map((dis, key) => {
+          return <CircleShapeDiscount key={key + dis} disscountedItem={dis} />;
         })}
       </div>
     </>

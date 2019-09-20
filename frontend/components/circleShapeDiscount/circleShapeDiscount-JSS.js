@@ -23,7 +23,7 @@ const useCircleShapeStyles = makeStyles(theme => ({
         objectFit: "cover",
         zIndex: 1
       },
-      "& .more_info_btn": {
+      "&:hover .more_info_btn": {
         backgroundColor: theme.palette.circleShapeDisscounts.pictureFilterColor,
         position: "absolute",
         zIndex: 3,

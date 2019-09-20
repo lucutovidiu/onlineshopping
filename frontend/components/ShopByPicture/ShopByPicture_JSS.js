@@ -30,9 +30,9 @@ const useShopByPictureStyles = makeStyles(theme => ({
       "& .picshop_product_title": {
         position: "absolute",
         textTransform: "uppercase",
-        top: 0,
+        top: "0.5rem",
         left: "50%",
-        transform: "translate(-50%,-60%)",
+        transform: "translateX(-50%)",
         color: theme.palette.shopByPicture.title,
         textShadow: `3px 2px 1px ${theme.palette.shopByPicture.titleShadow}`,
         letterSpacing: "3px",
@@ -40,8 +40,7 @@ const useShopByPictureStyles = makeStyles(theme => ({
         fontSize: "3rem",
         width: "100%",
         ["@media all and (max-width: 520px)"]: {
-          fontSize: "1.8rem",
-          transform: "translate(-50%,-50%)"
+          fontSize: "1.8rem"
         }
       },
       "& .picshop_picture": {
