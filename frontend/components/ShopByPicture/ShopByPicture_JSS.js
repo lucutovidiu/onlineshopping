@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 const useShopByPictureStyles = makeStyles(theme => ({
   picshop_main_wrapper: {
     textAlign: "center",
+    // backgroundColor: "red",
     position: "relative",
     height: "100%",
     display: "flex",

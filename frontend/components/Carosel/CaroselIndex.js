@@ -4,32 +4,26 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import { Grid, Typography } from "@material-ui/core";
-
-function setCurrentImage(imageArray) {
-  if (
-    typeof imageArray === "undefined" ||
-    imageArray === null ||
-    imageArray.length === 0
-  ) {
-    return null;
-  } else {
-    return imageArray[0];
-  }
-}
+import "animate.css";
+import { animationArray, getRndInteger, setCurrentImage } from "./helper";
 
 const CaroselIndex = ({ imageArray }) => {
   const classes = styles();
-  const [currentImage, setcurrentImage] = React.useState(
-    setCurrentImage(imageArray)
-  );
-  //   React.useEffect(() => {
-  //     setTimeout(() => {
-  //       nextImageBtn();
-  //       return () => {
-  //         setcurrentImage(null);
-  //       };
-  //     }, 4500);
-  //   });
+  const [currentImage, setcurrentImage] = React.useState({
+    ...setCurrentImage(imageArray),
+    firstAnimation: "bounce"
+  });
+  // const [firstAnimation, setFirstAnimation] = React.useState("bounce");
+  //
+  //
+  React.useEffect(() => {
+    let timeout = setInterval(() => {
+      nextImageBtn();
+    }, 3500);
+    return () => {
+      clearInterval(timeout);
+    };
+  }, [currentImage]);
   function nextImageBtn() {
     let currentIndex = imageArray.findIndex(img => img.id === currentImage.id);
     if (currentIndex + 1 === imageArray.length) {
@@ -57,15 +51,36 @@ const CaroselIndex = ({ imageArray }) => {
       </div>
     );
   }
-
   return (
     <Grid container className={classes.carosel_outer_wrapper}>
-      <div className="carosel_inner_wrapper">
-        <img
-          src={currentImage.imgSRC}
-          alt={currentImage.imgTitle.en}
-          className={"carosel_image " + classes.animateMe}
-        />
+      <div className={"carosel_inner_wrapper "}>
+        {imageArray.map((img, key) => {
+          if (img.id === currentImage.id) {
+            let an = getRndInteger(0, animationArray.length);
+            let fAni =
+              typeof currentImage.firstAnimation !== "undefined"
+                ? currentImage.firstAnimation
+                : animationArray[an];
+            return (
+              <img
+                key={key}
+                className={"carosel_image animated " + fAni}
+                src={img.imgSRC}
+                alt={img.imgTitle.en}
+              />
+            );
+          } else {
+            return (
+              <img
+                key={key}
+                className={classes.hide}
+                src={img.imgSRC}
+                alt={img.imgTitle.en}
+              />
+            );
+          }
+        })}
+
         <div
           className="carosel_text_left"
           style={{

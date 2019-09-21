@@ -4,10 +4,18 @@ import React from "react";
 // import Box from "@material-ui/core/Box";
 
 // import "../static/styles/_index.scss";
+// import dynamic from "next/dynamic";
 import ShopByPicture from "../frontend/components/ShopByPicture";
 import Navbar from "../frontend/components/navbar/navbar";
 import CaroselIndex from "../frontend/components/Carosel/CaroselIndex";
 import FooterIndex from "../frontend/components/Footer/FooterIndex";
+import NewlyAdded from "../frontend/components/newlyAdded/NewlyAdded";
+// const CaroselIndex = dynamic(
+//   () => import("../frontend/components/Carosel/CaroselIndex"),
+//   {
+//     ssr: false
+//   }
+// );
 
 const shopbypictureArray = [
   {
@@ -56,11 +64,54 @@ const mockCaroselImages = [
     imgTitleColor: "#8e44ad"
   }
 ];
+const mockNewlyAdded = [
+  {
+    id: 1,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/1.jpg"
+  },
+  {
+    id: 2,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/2.jpg"
+  },
+  {
+    id: 3,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/3.jpg"
+  },
+  {
+    id: 4,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/4.jpg"
+  },
+  {
+    id: 5,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/5.jpg"
+  },
+  {
+    id: 6,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/6.jpg"
+  },
+  {
+    id: 7,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/7.jpg"
+  },
+  {
+    id: 8,
+    title: { en: "Dress", ro: "Rochie" },
+    imgSrc: "../../../static/img/newlyAdded/thumbnail/8.jpg"
+  }
+];
 export default function Index() {
   return (
     <>
       <Navbar></Navbar>
       <CaroselIndex imageArray={mockCaroselImages} />
+      <NewlyAdded imagesArray={mockNewlyAdded} />
       {shopbypictureArray.map((cathegory, key) => {
         return <ShopByPicture key={key} pictureData={cathegory} />;
       })}

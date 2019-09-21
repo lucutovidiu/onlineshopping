@@ -39,7 +39,7 @@ const mockEshopMenuFooter = [
 
 const FooterIndex = () => {
   const classes = styles();
-  console.log(classes.getInTouch);
+  // console.log(classes.getInTouch);
   return (
     <Grid container className={classes.footerOuterWrapper}>
       <Grid container className="footerInnerWrapper">

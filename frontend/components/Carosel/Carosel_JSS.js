@@ -1,17 +1,10 @@
 import { makeStyles } from "@material-ui/styles";
 
 const styles = makeStyles(theme => ({
-  "@keyframes animateImage": {
-    from: {
-      opacity: 0
-    },
-    to: {
-      opacity: 1
-    }
+  hide: {
+    display: "none"
   },
-  animateMe: {
-    animation: "$animateImage 1s ease-in"
-  },
+  imagesContainer: {},
   carosel_outer_wrapper: {
     padding: "1.5rem 0 0 0",
     // backgroundColor: "red",
@@ -25,6 +18,9 @@ const styles = makeStyles(theme => ({
       margin: "0 auto",
       "& .carosel_image": {
         width: "100%"
+      },
+      "& .imagesContainer": {
+        position: "absolute"
       },
       "& .carosel_arrow_left,& .carosel_arrow_right": {
         position: "absolute",
