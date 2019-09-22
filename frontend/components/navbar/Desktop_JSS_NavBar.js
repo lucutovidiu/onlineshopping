@@ -47,7 +47,13 @@ const useDesktopStyles = makeStyles(theme => ({
           padding: "0 2rem",
           "& a": {
             textDecoration: "none",
-            color: "black"
+            color: "black",
+            "& img": {
+              position: "relative",
+              width: "70px",
+              height: "50px",
+              top: "4px"
+            }
           }
         }
       },
@@ -56,7 +62,7 @@ const useDesktopStyles = makeStyles(theme => ({
         display: "flex",
         justifyContent: "flex-end",
         padding: "0 2rem",
-        alignItems: "flex-start",
+        alignItems: "center",
         "& input": {
           padding: "0.7rem 0"
         }

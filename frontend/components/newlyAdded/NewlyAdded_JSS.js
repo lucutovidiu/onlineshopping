@@ -25,11 +25,13 @@ const styles = makeStyles(theme => ({
       height: "100%",
       left: "50%",
       transform: "translateX(-50%)",
+      pointerEvents: "none",
       "& .ChevronLeftIcon,& .ChevronRightIcon": {
+        pointerEvents: "auto",
         position: "absolute",
         width: "50px",
         height: "100px",
-        backgroundColor: "rgba(1,1,1,0.3)",
+        backgroundColor: theme.palette.newlyAdded.chevronIconBackgroundColor,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -50,7 +52,7 @@ const styles = makeStyles(theme => ({
     "& .slider_wrapper": {
       position: "relative",
       width: "93.6%",
-      border: "2px dashed #8e44ad",
+      border: `2px dashed ${theme.palette.newlyAdded.sliderBorder}`,
       margin: "0 auto",
       display: "flex",
       flexWrap: "no-wrap",
@@ -58,17 +60,31 @@ const styles = makeStyles(theme => ({
       scrollBehavior: "smooth",
       justifyContent: "space-between",
       padding: "0.5rem 0.2rem",
-      "& .image_container": {
-        cursor: "help",
-        minWidth: "300px",
+      "& .image_wrapper": {
+        display: "flex",
+        flexDirection: "column",
         fontSize: "1rem",
         fontWeight: "bold",
         letterSpacing: "2px",
-        display: "flex",
-        flexDirection: "column",
-        "& img": {
-          padding: "0.4rem 1.2rem 0.4rem 0",
-          width: "100%"
+        "& .image_container": {
+          position: "relative",
+          minWidth: "300px",
+          // "& .image_overlay": {
+          //   position: "absolute",
+          //   backgroundColor: "black",
+          //   width: "100%",
+          //   height: "100%",
+          //   top: "0",
+          //   display: "none"
+          // },
+          "& img": {
+            cursor: "help",
+            padding: "0.4rem 1.2rem 0.4rem 0",
+            width: "100%",
+            "&:hover": {
+              opacity: "0.7"
+            }
+          }
         }
       }
     }

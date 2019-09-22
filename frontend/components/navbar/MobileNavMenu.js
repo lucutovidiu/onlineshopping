@@ -22,7 +22,9 @@ const MobileNavMenu = () => {
       <nav className={mobileClasses.mobile_main_navbar_wrapper}>
         <div className="navbar_logo">
           <Link href="/">
-            <a>Ovi Logo</a>
+            <a>
+              <img src="../../../static/img/logo/logoV.png" alt="logo" />
+            </a>
           </Link>
         </div>
         <div className="mobile_menu_btn" onClick={toggleMenu}>

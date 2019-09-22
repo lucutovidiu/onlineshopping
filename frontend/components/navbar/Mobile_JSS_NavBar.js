@@ -24,7 +24,14 @@ const useMobileStyles = makeStyles(theme => ({
       top: 0,
       "& a": {
         textDecoration: "none",
-        color: "black"
+        color: "black",
+        position: "relative",
+        "& img": {
+          position: "relative",
+          width: "60px",
+          height: "45px",
+          top: "4px"
+        }
       }
     },
     "& .mobile_menu_btn": {

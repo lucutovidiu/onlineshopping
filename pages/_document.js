@@ -39,7 +39,7 @@ class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="/static/img/favicon/favicon.png"
+            href="/static/img/logo/logoV.png"
           />
         </Head>
         <body className="custom_class">

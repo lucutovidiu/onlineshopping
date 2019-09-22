@@ -23,8 +23,11 @@ const NewlyAdded = ({ imagesArray }) => {
       <Box className="carosel_head_title">Newly Added</Box>
       <div ref={scrollCaroselRef} className="slider_wrapper">
         {imagesArray.map(img => (
-          <div key={img.id} className="image_container">
-            <img src={img.imgSrc} alt={img.title} />
+          <div key={img.id} className="image_wrapper">
+            <div className="image_container">
+              <img src={img.imgSrc} alt={img.title} />
+              {/* <div className="image_overlay">More Info</div> */}
+            </div>
             <Box fontWeight="bold" fontSize="large">
               {img.title.en}
             </Box>

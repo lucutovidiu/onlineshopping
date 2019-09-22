@@ -17,7 +17,8 @@ const ShopByPicture = ({ pictureData }) => {
           variant="h1"
           component="h2"
         >
-          Shop by {pictureData.cathegory}
+          {pictureData.description.title.en}{" "}
+          {pictureData.description.cathegory.en}
         </Typography>
 
         <Typography
@@ -26,7 +27,7 @@ const ShopByPicture = ({ pictureData }) => {
           component="h2"
           noWrap
         >
-          Shop Now
+          {pictureData.btnName.en}
         </Typography>
       </div>
     </div>

@@ -44,8 +44,13 @@ const FooterIndex = () => {
     <Grid container className={classes.footerOuterWrapper}>
       <Grid container className="footerInnerWrapper">
         <Grid item md={4} xs={12} sm={12}>
-          <Box letterSpacing={2} fontSize="1.5rem" padding="1rem 0 0.5rem 1rem">
-            My-eshopping
+          <Box
+            className="section_header"
+            letterSpacing={2}
+            fontSize="1.5rem"
+            padding="1rem 0 0.5rem 1rem"
+          >
+            My-eShopping
           </Box>
           <div className="my_eshopping_links">
             {mockEshopMenuFooter.map((link, key) => (
@@ -56,7 +61,12 @@ const FooterIndex = () => {
           </div>
         </Grid>
         <Grid item md={4} xs={12} sm={12}>
-          <Box letterSpacing={2} fontSize="1.5rem" padding="1rem 0 0.5rem 1rem">
+          <Box
+            className="section_header"
+            letterSpacing={2}
+            fontSize="1.5rem"
+            padding="1rem 0 0.5rem 1rem"
+          >
             Follow Us
           </Box>
 
@@ -70,7 +80,12 @@ const FooterIndex = () => {
           </Link>
         </Grid>
         <Grid item md={4} xs={12} sm={12}>
-          <Box letterSpacing={2} fontSize="1.5rem" padding="1rem 0 0.5rem 1rem">
+          <Box
+            className="section_header"
+            letterSpacing={2}
+            fontSize="1.5rem"
+            padding="1rem 0 0.5rem 1rem"
+          >
             Keep In Touch
           </Box>
           <form action="#?" className={classes.keepInTouch}>

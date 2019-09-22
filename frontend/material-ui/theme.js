@@ -46,6 +46,17 @@ const theme = createMuiTheme({
       shapeFooterBackground: "#EAEAEA",
       shapeFooterBackgroundBoxShaddow: "gray",
       priceBtnColor: "#3498db"
+    },
+    footer: {
+      backgroundColor: "#34495e",
+      sectionHeader: "#9b59b6",
+      linkColor: "black",
+      linkHoverColor: "grey",
+      iconColor: "#2980b9"
+    },
+    newlyAdded: {
+      chevronIconBackgroundColor: "rgba(1,1,1,0.3)",
+      sliderBorder: "#8e44ad"
     }
   }
 });

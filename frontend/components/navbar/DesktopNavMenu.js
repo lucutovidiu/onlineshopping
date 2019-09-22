@@ -25,7 +25,9 @@ const DesktopNavMenu = () => {
           <div className="navbar_main_menu-list">
             <div className="navbar_logo">
               <Link href="/">
-                <a>Ovi Logo</a>
+                <a>
+                  <img src="../../../static/img/logo/logoV.png" alt="logo" />
+                </a>
               </Link>
             </div>
             {MenuNavItems().map((link, key) => (

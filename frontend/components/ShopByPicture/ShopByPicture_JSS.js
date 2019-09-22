@@ -4,18 +4,23 @@ const useShopByPictureStyles = makeStyles(theme => ({
   picshop_main_wrapper: {
     textAlign: "center",
     // backgroundColor: "red",
+    // border: "1px solid pink",
     position: "relative",
     height: "100%",
+    width: "50%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     paddingTop: "1rem",
+    ["@media all and (max-width: 520px)"]: {
+      width: "100%"
+    },
     "& .picshop_pic_wrapper": {
       position: "relative",
       display: "inline-block",
       marginBottom: "2rem",
-      height: "70vh",
-      width: "90vw",
+      height: "65vh",
+      width: "90%",
       maxWidth: "650px",
       maxHeight: "450px",
       "&::after": {

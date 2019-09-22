@@ -19,16 +19,36 @@ import NewlyAdded from "../frontend/components/newlyAdded/NewlyAdded";
 
 const shopbypictureArray = [
   {
-    cathegory: "Scarfs",
+    description: {
+      cathegory: { en: "Scarfs", ro: "Fulare" },
+      title: { en: "Shop By", ro: "Cumpara dupa" }
+    },
+    btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/1.jpg"
   },
   {
-    cathegory: "Dresses",
+    description: {
+      cathegory: { en: "Dresses", ro: "Rochii" },
+      title: { en: "Shop By", ro: "Cumpara dupa" }
+    },
+    btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/2.jpg"
   },
   {
-    cathegory: "Jumpers",
+    description: {
+      cathegory: { en: "Jumpers", ro: "Pulovere" },
+      title: { en: "Shop By", ro: "Cumpara dupa" }
+    },
+    btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/3.jpg"
+  },
+  {
+    description: {
+      cathegory: { en: "Skirts", ro: "Fuste" },
+      title: { en: "Shop By", ro: "Cumpara dupa" }
+    },
+    btnName: { en: "Shop Now", ro: "Cumpara Acum" },
+    backgroundImage: "../../../static/img/fashionPic/4.jpg"
   }
 ];
 
@@ -112,9 +132,18 @@ export default function Index() {
       <Navbar></Navbar>
       <CaroselIndex imageArray={mockCaroselImages} />
       <NewlyAdded imagesArray={mockNewlyAdded} />
-      {shopbypictureArray.map((cathegory, key) => {
-        return <ShopByPicture key={key} pictureData={cathegory} />;
-      })}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "94%",
+          margin: "0 auto"
+        }}
+      >
+        {shopbypictureArray.map((cathegory, key) => {
+          return <ShopByPicture key={key} pictureData={cathegory} />;
+        })}
+      </div>
       <FooterIndex />
     </>
     // <Container maxWidth="sm">
