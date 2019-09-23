@@ -3,6 +3,14 @@ import { Grid, Box } from "@material-ui/core";
 import styles from "./NewlyAdded_JSS";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+/*
+    Image should be having the size of:
+    width : 300px,
+    height: 300px
+
+*/
+
 const NewlyAdded = ({ imagesArray }) => {
   const classes = styles();
   const scrollCaroselRef = useRef(null);

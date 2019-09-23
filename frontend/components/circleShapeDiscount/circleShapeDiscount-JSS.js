@@ -1,5 +1,11 @@
 import { makeStyles } from "@material-ui/styles";
-import { minHeight, minWidth } from "@material-ui/system";
+
+/*
+  image should have below sizes:
+  width 640
+  height 426
+
+*/
 
 const useCircleShapeStyles = makeStyles(theme => ({
   circle_shape_wrapper: {

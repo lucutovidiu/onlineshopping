@@ -10,6 +10,11 @@ const theme = createMuiTheme({
     secondary: {
       main: "#19857b"
     },
+    fonts: {
+      LatoBlack: "Lato Black",
+      Mina: "Mina",
+      HandWriting: "HandWriting"
+    },
     error: {
       main: red.A400
     },

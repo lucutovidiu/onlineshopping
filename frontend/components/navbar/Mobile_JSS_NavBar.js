@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 const useMobileStyles = makeStyles(theme => ({
   mobile_main_navbar_wrapper: {
     position: "sticky",
-    zIndex: "15",
+    zIndex: 100,
     top: 0 /* required */,
     display: "flex",
     justifyContent: "space-evenly",

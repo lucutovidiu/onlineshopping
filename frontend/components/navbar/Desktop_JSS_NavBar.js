@@ -22,7 +22,7 @@ const useDesktopStyles = makeStyles(theme => ({
   },
   main_navbar_wrapper: {
     position: "sticky",
-    zIndex: 3,
+    zIndex: 100,
     top: 0 /* required */,
     display: "flex",
     padding: "0.5rem 1rem",

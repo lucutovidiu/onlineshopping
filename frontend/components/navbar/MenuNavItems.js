@@ -19,7 +19,7 @@ export function MenuNavItems() {
         en: "Offers",
         ro: "Oferte"
       },
-      navItemLink: "/Discounts"
+      navItemLink: "/Offers"
     }
   ];
 }

@@ -4,6 +4,11 @@ import { Typography } from "@material-ui/core";
 
 const index = ({ disscountedItem }) => {
   const classes = useCircleShapeStyles();
+  const previousValue = Math.round(
+    parseFloat(disscountedItem.disscountValue) +
+      parseFloat(disscountedItem.disscountValue) * 0.3
+  );
+
   return (
     <div className={classes.circle_shape_wrapper}>
       <div className="circle_shape_header">
@@ -16,7 +21,11 @@ const index = ({ disscountedItem }) => {
       </div>
       <div className="circle_shape_footer">
         <Typography className="sale_text" variant="h6" component="h1">
-          Now Only: {disscountedItem.disscountValue}{" "}
+          <span style={{ textDecoration: "line-through" }}>
+            Was: {previousValue}
+            {disscountedItem.sellingCurrency}
+          </span>{" "}
+          Now Only: {disscountedItem.disscountValue}
           {disscountedItem.sellingCurrency}
         </Typography>
         <Typography className="buy_now" variant="h6" component="h1">

@@ -7,6 +7,13 @@ import { Grid, Typography } from "@material-ui/core";
 import "animate.css";
 import { animationArray, getRndInteger, setCurrentImage } from "./helper";
 
+/*
+  image should have below sizes:
+  width 1260
+  height 562
+
+*/
+
 const CaroselIndex = ({ imageArray }) => {
   const classes = styles();
   const [currentImage, setcurrentImage] = React.useState({
@@ -63,14 +70,14 @@ const CaroselIndex = ({ imageArray }) => {
                 : animationArray[an];
             // console.log("animation:", fAni);
             return (
-              <div className="carosel_image">
+              <div key={img.id} className="carosel_image">
                 <img
                   key={key}
                   className={"animated " + fAni}
                   src={img.imgSRC}
                   alt={img.imgTitle.en}
                 />
-                <div className={"carosel_indicator animated " + fAni}></div>
+                <div className={"carosel_image_overlay animated " + fAni}></div>
               </div>
             );
           } else {

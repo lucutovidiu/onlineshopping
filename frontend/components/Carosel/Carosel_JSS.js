@@ -7,26 +7,33 @@ const styles = makeStyles(theme => ({
   imagesContainer: {},
   carosel_outer_wrapper: {
     padding: "1.5rem 0 0 0",
-    // backgroundColor: "red",
+
     position: "relative",
     "& .carosel_inner_wrapper": {
       cursor: "pointer",
       position: "relative",
+      // backgroundColor: "red",
       height: "auto",
       width: "95%",
       maxWidth: "1260px",
       margin: "0 auto",
       "& .carosel_image": {
-        // position:"absolute",
+        position: "relative",
         width: "100%",
         height: "100%",
-        "& .carosel_indicator": {
+        "& img": {
+          width: "100%",
+          height: "100%"
+        },
+        "& .carosel_image_overlay": {
           position: "absolute",
           width: "100%",
-          height: "99%",
+          height: "100%",
           backgroundColor: theme.palette.carosel.imageOverlayColor,
           top: "0",
-          bottom: "50px"
+          right: "0",
+          left: 0,
+          bottom: "0"
         }
       },
       "& .imagesContainer": {
