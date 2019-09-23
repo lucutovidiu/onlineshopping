@@ -38,7 +38,7 @@ const animationArray = [
   // "fadeOutUp",
   // "fadeOutUpBig",
   "flipInX",
-  "flipInY",
+  // "flipInY",
   // "flipOutX",
   // "flipOutY",
   //   "lightSpeedIn",
@@ -67,15 +67,15 @@ const animationArray = [
   // "zoomOutLeft",
   // "zoomOutRight",
   // "zoomOutUp",
-  "slideInDown",
+  // "slideInDown",
   //   "slideInLeft",
   //   "slideInRight",
-  "slideInUp",
+  "slideInUp"
   // "slideOutDown",
   // "slideOutLeft",
   // "slideOutRight",
   // "slideOutUp",
-  "heartBeat"
+  // "heartBeat"
 ];
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;

@@ -58,6 +58,12 @@ const theme = createMuiTheme({
     newlyAdded: {
       chevronIconBackgroundColor: "rgba(1,1,1,0.3)",
       sliderBorder: "#8e44ad"
+    },
+    carosel: {
+      chevronBackgroundColor: "rgba(192, 57, 43,0.5)",
+      chevronHoverColor: "rgba(192, 57, 43,0.8)",
+      textShadowColor: "#8e44ad",
+      imageOverlayColor: "rgba(1,1,1,0.4)"
     }
   }
 });

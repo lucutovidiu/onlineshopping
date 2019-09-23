@@ -17,7 +17,17 @@ const styles = makeStyles(theme => ({
       maxWidth: "1260px",
       margin: "0 auto",
       "& .carosel_image": {
-        width: "100%"
+        // position:"absolute",
+        width: "100%",
+        height: "100%",
+        "& .carosel_indicator": {
+          position: "absolute",
+          width: "100%",
+          height: "99%",
+          backgroundColor: theme.palette.carosel.imageOverlayColor,
+          top: "0",
+          bottom: "50px"
+        }
       },
       "& .imagesContainer": {
         position: "absolute"
@@ -27,12 +37,12 @@ const styles = makeStyles(theme => ({
         fontSize: "3rem",
         transform: "translateY(-50%)",
         color: "white",
-        backgroundColor: "rgba(192, 57, 43,0.5)",
+        backgroundColor: theme.palette.carosel.chevronBackgroundColor,
         "@media all and (max-width:576px)": {
           fontSize: "1.5rem"
         },
         "&:hover": {
-          backgroundColor: "rgba(192, 57, 43,0.8)"
+          backgroundColor: theme.palette.carosel.chevronHoverColor
         }
       },
       "& .carosel_arrow_left": {
@@ -47,7 +57,7 @@ const styles = makeStyles(theme => ({
         maxWidth: "32%",
         textTransform: "uppercase",
         position: "absolute",
-        textShadow: "1px 1px #2c3e50",
+        textShadow: `1px 1px ${theme.palette.carosel.textShadowColor}`,
         // backgroundColor: "rgba(52, 73, 94,0.6)",
         fontFamily: "Moca",
         zIndex: 2,
@@ -95,18 +105,6 @@ const styles = makeStyles(theme => ({
         width: "100%"
       }
     }
-  },
-  nullImageDisplay: {
-    position: "relative",
-    height: "560px",
-    width: "95%",
-    maxWidth: "1260px",
-    margin: "0 auto",
-    color: "black",
-    textTransform: "uppercase",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
   }
 }));
 

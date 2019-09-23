@@ -19,7 +19,7 @@ const CaroselIndex = ({ imageArray }) => {
   React.useEffect(() => {
     let timeout = setInterval(() => {
       nextImageBtn();
-    }, 3500);
+    }, 4500);
     return () => {
       clearInterval(timeout);
     };
@@ -61,13 +61,17 @@ const CaroselIndex = ({ imageArray }) => {
               typeof currentImage.firstAnimation !== "undefined"
                 ? currentImage.firstAnimation
                 : animationArray[an];
+            // console.log("animation:", fAni);
             return (
-              <img
-                key={key}
-                className={"carosel_image animated " + fAni}
-                src={img.imgSRC}
-                alt={img.imgTitle.en}
-              />
+              <div className="carosel_image">
+                <img
+                  key={key}
+                  className={"animated " + fAni}
+                  src={img.imgSRC}
+                  alt={img.imgTitle.en}
+                />
+                <div className={"carosel_indicator animated " + fAni}></div>
+              </div>
             );
           } else {
             return (
@@ -104,10 +108,6 @@ const CaroselIndex = ({ imageArray }) => {
           className="carosel_arrow_right"
           onClick={nextImageBtn}
         />
-
-        {/* <div className="carosel_indicator">
-          <div className="carosel_indicator_bar">aaaa</div>
-        </div> */}
       </div>
     </Grid>
   );

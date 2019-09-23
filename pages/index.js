@@ -81,7 +81,7 @@ const mockCaroselImages = [
       en: "Autumn2019 Sweet Flowers",
       ro: "Toamna2019 Flori Frumoase"
     },
-    imgTitleColor: "#8e44ad"
+    imgTitleColor: "#ecf0f1"
   }
 ];
 const mockNewlyAdded = [
