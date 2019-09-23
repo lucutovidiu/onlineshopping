@@ -14,7 +14,7 @@ const theme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: "#fff"
+      default: "#f5f6fa"
     },
     signInBar: {
       link: "rgb(172, 172, 172)"
@@ -32,7 +32,8 @@ const theme = createMuiTheme({
       title: "#9b59b6",
       titleShadow: "black",
       shopNowBtnBackground: "#ecf0f1",
-      shopNowBtnBorder: "gray"
+      shopNowBtnBorder: "gray",
+      shopNowBtnHover: "rgb(112, 115, 126)"
     },
     signIn: {
       background: "#f6f9fa",

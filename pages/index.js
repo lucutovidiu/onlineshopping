@@ -4,18 +4,18 @@ import React from "react";
 // import Box from "@material-ui/core/Box";
 
 // import "../static/styles/_index.scss";
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import ShopByPicture from "../frontend/components/ShopByPicture";
 import Navbar from "../frontend/components/navbar/navbar";
-import CaroselIndex from "../frontend/components/Carosel/CaroselIndex";
+// import CaroselIndex from "../frontend/components/Carosel/CaroselIndex";
 import FooterIndex from "../frontend/components/Footer/FooterIndex";
 import NewlyAdded from "../frontend/components/newlyAdded/NewlyAdded";
-// const CaroselIndex = dynamic(
-//   () => import("../frontend/components/Carosel/CaroselIndex"),
-//   {
-//     ssr: false
-//   }
-// );
+const CaroselIndex = dynamic(
+  () => import("../frontend/components/Carosel/CaroselIndex"),
+  {
+    ssr: false
+  }
+);
 
 const shopbypictureArray = [
   {
@@ -126,7 +126,7 @@ const mockNewlyAdded = [
     imgSrc: "../../../static/img/newlyAdded/thumbnail/8.jpg"
   }
 ];
-export default function Index() {
+export default function Home() {
   return (
     <>
       <Navbar></Navbar>

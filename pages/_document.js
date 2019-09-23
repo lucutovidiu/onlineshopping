@@ -2,7 +2,7 @@
 // Event handlers like onClick can't be added to this file
 
 // ./pages/_document.js
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript, Html } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";
 import theme from "../frontend/material-ui/theme";
 
@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <Html>
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -46,7 +46,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

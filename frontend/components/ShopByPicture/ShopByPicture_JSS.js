@@ -69,6 +69,9 @@ const useShopByPictureStyles = makeStyles(theme => ({
         ["@media all and (max-width: 520px)"]: {
           fontSize: "1.5rem",
           padding: "0.8rem 0.5rem"
+        },
+        "&:hover": {
+          backgroundColor: theme.palette.shopByPicture.shopNowBtnHover
         }
       }
     }

@@ -14,6 +14,7 @@ nextApp
     expressApp = express();
     expressApp.use(compression());
     expressApp.get("*", (req, res) => {
+      if (req.path === "/Test") console.log("path = " + req.path);
       return nextRoutesHandler(req, res);
     });
 

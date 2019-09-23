@@ -14,7 +14,7 @@ const useSignInStyles = makeStyles(theme => ({
   signin_whole_page_main_wrapper: {
     position: "absolute",
     width: "100%",
-    height: "calc(100% - (63px + 32px))",
+    height: "calc(100% - (82px + 32px))",
     background: `url("../../../static/img/background/signin2.jpg") no-repeat`,
     backgroundSize: "100%",
     backgroundPosition: "top",
