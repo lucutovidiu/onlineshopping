@@ -41,7 +41,8 @@ const theme = createMuiTheme({
       shopNowBtnHover: "rgb(112, 115, 126)"
     },
     signIn: {
-      background: "#f6f9fa",
+      componentBackgroundImage: `url("../../../static/img/background/signin3.jpg") no-repeat`,
+      background: "rgba(218, 214, 214,0.8)",
       boxShadow: "gray",
       link: "rgb(41, 91, 201)"
     },
@@ -69,6 +70,10 @@ const theme = createMuiTheme({
       chevronHoverColor: "rgba(192, 57, 43,0.8)",
       textShadowColor: "#8e44ad",
       imageOverlayColor: "rgba(1,1,1,0.4)"
+    },
+    moreArticles: {
+      imageOverlayColor: "rgba(1,1,1,0.3)",
+      imageFrameBorder: "rgba(142, 68, 173,0.8)"
     }
   }
 });

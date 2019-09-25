@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <div className={classes.signin_whole_page_main_wrapper}>
       <div className="signin_main_wrapper">
-        <div className="signin_close_modal">X</div>
+        {/* <div className="signin_close_modal">X</div> */}
         <div className="signin_title_wrapper">
           <div className="title">SIGN IN</div>
           <div className="signin_signup_title">

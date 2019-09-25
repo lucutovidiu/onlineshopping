@@ -18,7 +18,7 @@ nextApp
     });
 
     expressApp.listen(SERVER_PORT, () => {
-      console.log("" + SERVER_PORT);
+      console.log("http://localhost:" + SERVER_PORT + "/");
     });
   })
   .catch(console.log);

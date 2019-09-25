@@ -7,16 +7,24 @@ export default makeStyles(theme => ({
     position: "relative",
     margin: "1.5rem 0 1.5rem",
     // backgroundColor: "rgba(44, 62, 80,0.6)",
-    borderRadius: "5px",
-    overflow: "hidden",
     "& .image_wrapper": {
       position: "relative",
+      borderRadius: "5px",
+      overflow: "hidden",
+      border: `3px dashed ${theme.palette.moreArticles.imageFrameBorder}`,
+      padding: "0",
+      margin: "0",
+      height: "400px",
+      "& img": {
+        width: "100%",
+        height: "100%"
+      },
       "& .more_info": {
         position: "absolute",
         top: "0",
-        height: "98.8%",
+        height: "100%",
         width: "100%",
-        backgroundColor: "rgba(1,1,1,0.2)",
+        backgroundColor: theme.palette.moreArticles.imageOverlayColor,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

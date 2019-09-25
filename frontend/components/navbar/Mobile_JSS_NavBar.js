@@ -6,8 +6,9 @@ const useMobileStyles = makeStyles(theme => ({
     zIndex: 100,
     top: 0 /* required */,
     display: "flex",
-    justifyContent: "space-evenly",
-    padding: "0.8rem 1rem",
+    alignItems: "baseline",
+    justifyContent: "space-around",
+    padding: "0.5rem 0rem",
     backgroundColor: theme.palette.background.default,
     borderTop: `1px solid ${theme.palette.navBar.navBarBorders}`,
     borderBottom: `1px solid ${theme.palette.navBar.navBarBorders}`,
@@ -15,36 +16,43 @@ const useMobileStyles = makeStyles(theme => ({
       display: "none"
     },
     "& .navbar_logo": {
-      position: "absolute",
+      // border: "1px solid green",
+      position: "relative",
       fontFamily: "HandWriting",
       fontSize: "2rem",
       fontWeight: "normal",
-      padding: "0 1rem",
-      left: 0,
-      top: 0,
+      padding: "0 0.5rem",
+      width: "65px",
+      height: "45px",
+      marginRight: "1rem",
+      // display: "flex",
+
       "& a": {
         textDecoration: "none",
         color: "black",
         position: "relative",
         "& img": {
           position: "relative",
-          width: "60px",
-          height: "45px",
-          top: "4px"
+          paddingTop: "0.3rem",
+          width: "100%",
+          height: "100%",
+          objectFit: "100%"
+          // objectPosition: "center"
         }
       }
     },
     "& .mobile_menu_btn": {
+      // border: "1px solid green",
       fontSize: "1rem",
       color: theme.palette.navBar.link,
       display: "flex",
+      justifyContent: "center",
       alignItems: "center",
+      alignSelf: "center",
       width: "85px",
-      justifyContent: "space-around",
       borderLeft: "1px dashed pink",
       borderRight: "1px dashed pink",
-      cursor: "pointer",
-      marginRight: "2rem"
+      cursor: "pointer"
     },
     "& .dropDownMenu": {
       position: "absolute",
@@ -71,13 +79,17 @@ const useMobileStyles = makeStyles(theme => ({
       }
     },
     "& .shopping_cart_menu": {
-      position: "absolute",
-      right: "0",
-      float: "left",
+      // border: "1px solid green",
+      position: "relative",
+      // right: "0",
+      // float: "left",
       display: "flex",
+      alignItems: "center",
+      alignSelf: "center",
+
       "& > *": {
-        paddingRight: "0.6rem",
-        paddingBottom: "0.5rem"
+        paddingLeft: "0.6rem"
+        // paddingBottom: "0.5rem"
       },
       "& :last-child": {
         // backgroundColor: "red",
