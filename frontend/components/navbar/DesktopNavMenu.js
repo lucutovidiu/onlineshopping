@@ -9,7 +9,7 @@ import LanguageIcon from "@material-ui/icons/Language";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import useDesktopStyles from "./Desktop_JSS_NavBar";
-import CollectionSubmenu from "./CollectionSubmenu";
+import CollectionSubmenu from "./CollectionSubmenu/CollectionSubmenu";
 
 const DesktopNavMenu = () => {
   const desktopClasses = useDesktopStyles();
@@ -95,6 +95,7 @@ const DesktopNavMenu = () => {
             <Input
               autoComplete="off"
               placeholder="search for items..."
+              className={desktopClasses.inputStyles}
               startAdornment={
                 <InputAdornment position="start">
                   <SearchIcon />

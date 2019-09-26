@@ -30,7 +30,10 @@ const theme = createMuiTheme({
       linkHover: "rgb(46, 44, 44)",
       iconsHover: "rgb(218, 214, 214)",
       navBarBorders: "rgb(218, 214, 214)",
-      mobileDropdown: "#ecf0f1"
+      mobileDropdown: "#ecf0f1",
+      searchInputStyles: {
+        afterBorderColor: "#880e4f",
+      }
     },
     shopByPicture: {
       borders: "rgb(112, 105, 105)",
@@ -74,6 +77,15 @@ const theme = createMuiTheme({
     moreArticles: {
       imageOverlayColor: "rgba(1,1,1,0.3)",
       imageFrameBorder: "rgba(142, 68, 173,0.8)"
+    },
+    collectionSubmenu: {
+      menuBackgroundColor: "rgba(109, 33, 79,1.0)",
+      menuItemsColor: "rgba(236, 240, 241,1.0)"
+    },
+    CollectionFilterMenuComponent_JSS: {
+      dropdownBoxBorderColor: "black",
+      filterBtnBackgroundColor: "rgb(34, 34, 34)",
+      filterBtnTextColor: "#ED4C67",
     }
   }
 });

@@ -148,6 +148,11 @@ const useDesktopStyles = makeStyles(theme => ({
     "& p": {
       fontWeight: "bold"
     }
+  },
+  inputStyles: {
+    "&:after": {
+      borderBottom: `2px solid ${theme.palette.navBar.searchInputStyles.afterBorderColor}`,
+    }
   }
 }));
 
