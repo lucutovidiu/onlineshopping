@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { Tooltip } from "@material-ui/core";
 
 const useDesktopStyles = makeStyles(theme => ({
   login_navbar_warpper: {
@@ -70,6 +71,7 @@ const useDesktopStyles = makeStyles(theme => ({
     }
   },
   nav_link: {
+    // border: "1px solid pink",
     textDecoration: "none",
     padding: "0 1rem",
     color: theme.palette.navBar.linkHover,
@@ -94,8 +96,45 @@ const useDesktopStyles = makeStyles(theme => ({
       //   animation: nav_top_bar 1s,
     }
   },
-  menu_right: {
+  "@keyframes arrowDownAnimation": {
+    from: {
+      paddingTop: "0"
+    },
+    to: {
+      paddingTop: "20px",
+      visibility: "hidden"
+    }
+  },
+  navbar_collection_menu: {
     // border: "1px solid pink",
+    position: "relative",
+    // overflow: "hidden",
+    "& .navbar_collection_menu_btn": {
+      display: "flex",
+      alignItems: "center",
+      cursor: "context-menu",
+      textDecoration: "none",
+      // padding: "0 1rem",
+      color: theme.palette.navBar.linkHover,
+      fontSize: "1rem",
+      fontFamily: "Lato Black",
+      position: "relative",
+      color: theme.palette.navBar.link,
+      margin: "0",
+      paddingRight: "0",
+      "&:hover, &:active": {
+        color: theme.palette.navBar.linkHover
+      },
+      "&:hover .expand_down": {
+        color: theme.palette.navBar.linkHover,
+        position: "relative",
+        // marginRight: "0.5rem"
+        paddingTop: "20px",
+        animation: "$arrowDownAnimation 0.8s ease-out forwards"
+      }
+    }
+  },
+  menu_right: {
     display: "flex",
     justifyContent: "space-around",
     width: "160px",

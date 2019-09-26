@@ -33,7 +33,7 @@ const MoreArticles = ({ img }) => {
           More Info
         </div>
       </div>
-      <div className="article_title">{img.title.en}</div>
+      <div className="article_title">{img.title.en}{img.price}{img.currency}</div>
     </div>
   );
 };
