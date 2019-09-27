@@ -65,6 +65,7 @@ const useShopByPictureStyles = makeStyles(theme => ({
         padding: "1.2rem",
         border: `2px solid ${theme.palette.shopByPicture.shopNowBtnBorder}`,
         letterSpacing: "2px",
+        color: "black",
         cursor: "pointer",
         ["@media all and (max-width: 520px)"]: {
           fontSize: "1.5rem",

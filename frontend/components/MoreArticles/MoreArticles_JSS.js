@@ -11,7 +11,7 @@ export default makeStyles(theme => ({
       position: "relative",
       borderRadius: "5px",
       overflow: "hidden",
-      border: `3px dashed ${theme.palette.moreArticles.imageFrameBorder}`,
+      // border: `3px dashed ${theme.palette.moreArticles.imageFrameBorder}`,
       padding: "0",
       margin: "0",
       height: "400px",

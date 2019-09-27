@@ -23,6 +23,7 @@ const shopbypictureArray = [
       cathegory: { en: "Scarfs", ro: "Fulare" },
       title: { en: "Shop By", ro: "Cumpara dupa" }
     },
+    link: "/Collection/Article/123254654841",
     btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/1.jpg"
   },
@@ -31,6 +32,7 @@ const shopbypictureArray = [
       cathegory: { en: "Dresses", ro: "Rochii" },
       title: { en: "Shop By", ro: "Cumpara dupa" }
     },
+    link: "/Collection/Article/123254654841",
     btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/2.jpg"
   },
@@ -39,6 +41,7 @@ const shopbypictureArray = [
       cathegory: { en: "Jumpers", ro: "Pulovere" },
       title: { en: "Shop By", ro: "Cumpara dupa" }
     },
+    link: "/Collection/Article/123254654841",
     btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/3.jpg"
   },
@@ -47,6 +50,7 @@ const shopbypictureArray = [
       cathegory: { en: "Skirts", ro: "Fuste" },
       title: { en: "Shop By", ro: "Cumpara dupa" }
     },
+    link: "/Collection/Article/123254654841",
     btnName: { en: "Shop Now", ro: "Cumpara Acum" },
     backgroundImage: "../../../static/img/fashionPic/4.jpg"
   }
@@ -60,24 +64,28 @@ const mockCaroselImages = [
       en: "Autumn2019 Romantic Stories",
       ro: "Toamna2019 Amintiri Romantice"
     },
+    link: "/Collection/Article/123254654841",
     imgTitleColor: "pink"
   },
   {
     id: 223,
     imgSRC: "../../../static/img/carosel/2.jpg",
     imgTitle: { en: "Autumn2019 Jackets", ro: "Toamna2019 Jachete" },
+    link: "/Collection/Article/123254654841",
     imgTitleColor: "white"
   },
   {
     id: 32,
     imgSRC: "../../../static/img/carosel/3.jpg",
     imgTitle: { en: "Autumn2019 Jumpers", ro: "Toamna2019 Pulovere" },
+    link: "/Collection/Article/123254654841",
     imgTitleColor: "#ecf0f1"
   },
   {
     id: 44,
     imgSRC: "../../../static/img/carosel/4.jpg",
     imgTitle: {
+      link: "/Collection/Article/123254654841",
       en: "Autumn2019 Sweet Flowers",
       ro: "Toamna2019 Flori Frumoase"
     },
@@ -88,43 +96,59 @@ const mockNewlyAdded = [
   {
     id: 1,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/1.jpg"
   },
+
   {
     id: 2,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/2.jpg"
   },
+
   {
     id: 3,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/3.jpg"
   },
+
   {
     id: 4,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/4.jpg"
   },
+
   {
     id: 5,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/5.jpg"
   },
+
   {
     id: 6,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/6.jpg"
   },
+
   {
     id: 7,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/7.jpg"
   },
+
   {
     id: 8,
     title: { en: "Dress", ro: "Rochie" },
+    link: "/Collection/Article/123254654841",
     imgSrc: "../../../static/img/newlyAdded/thumbnail/8.jpg"
   }
+
 ];
 export default function Home() {
   return (

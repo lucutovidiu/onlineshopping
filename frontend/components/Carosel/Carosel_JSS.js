@@ -105,6 +105,10 @@ const styles = makeStyles(theme => ({
             "& svg": {
               fontSize: "0.8rem"
             }
+          },
+          "& a": {
+            textDecoration: "none",
+            color: "inherit"
           }
         }
       },

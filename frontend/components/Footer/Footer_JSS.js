@@ -7,6 +7,7 @@ const styles = makeStyles(theme => {
       backgroundColor: theme.palette.footer.backgroundColor,
       height: "auto",
       padding: "2rem 0 3rem 1rem",
+      // fontFamily: "Poppins, sans-serif",
       "& .section_header": {
         color: theme.palette.footer.sectionHeader,
         fontWeight: "bold"
@@ -37,7 +38,7 @@ const styles = makeStyles(theme => {
       width: "fit-content",
       cursor: "pointer",
       paddingLeft: "1.2rem",
-      fontSize: "0.9rem",
+      fontSize: "1rem",
       color: theme.palette.footer.linkColor,
       "& a,& a:active": {
         textDecoration: "none",
@@ -66,12 +67,16 @@ const styles = makeStyles(theme => {
       },
       "& input": {
         width: "160px",
+        color: theme.palette.footer.linkColor,
         "@media all and (max-width:571px)": {
           width: "140px"
         }
       },
       "& .subscribeToNewsletter": {
         marginLeft: "0.5rem",
+        color: theme.palette.footer.linkColor,
+        fontFamily: "inherit",
+        letterSpacing: "1px",
         "& .MuiButton-label": {
           margin: 0
         },

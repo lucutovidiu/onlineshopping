@@ -3,6 +3,7 @@ import { Grid, Box } from "@material-ui/core";
 import styles from "./NewlyAdded_JSS";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import Link from "next/link";
 
 /*
     Image should be having the size of:
@@ -33,7 +34,11 @@ const NewlyAdded = ({ imagesArray }) => {
         {imagesArray.map(img => (
           <div key={img.id} className="image_wrapper">
             <div className="image_container">
-              <img src={img.imgSrc} alt={img.title} />
+              <Link href={img.link}>
+                <a>
+                  <img src={img.imgSrc} alt={img.title} />
+                </a>
+              </Link>
               {/* <div className="image_overlay">More Info</div> */}
             </div>
             <Box fontWeight="bold" fontSize="large">

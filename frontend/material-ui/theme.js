@@ -44,7 +44,7 @@ const theme = createMuiTheme({
       shopNowBtnHover: "rgb(112, 115, 126)"
     },
     signIn: {
-      componentBackgroundImage: `url("../../../static/img/background/signin3.jpg") no-repeat`,
+      componentBackgroundImage: `url("../../../static/img/background/signin3.jpg") no-repeat center center fixed`,
       background: "rgba(218, 214, 214,0.8)",
       boxShadow: "gray",
       link: "rgb(41, 91, 201)"
@@ -60,7 +60,7 @@ const theme = createMuiTheme({
     footer: {
       backgroundColor: "#34495e",
       sectionHeader: "#9b59b6",
-      linkColor: "black",
+      linkColor: "#EAEAEA",
       linkHoverColor: "grey",
       iconColor: "#2980b9"
     },
@@ -79,7 +79,7 @@ const theme = createMuiTheme({
       imageFrameBorder: "rgba(142, 68, 173,0.8)"
     },
     collectionSubmenu: {
-      menuBackgroundColor: "rgba(109, 33, 79,1.0)",
+      menuBackgroundColor: "rgba(62, 10, 42, 1)",//"rgba(109, 33, 79,1.0)",
       menuItemsColor: "rgba(236, 240, 241,1.0)"
     },
     CollectionFilterMenuComponent_JSS: {

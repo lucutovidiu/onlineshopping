@@ -17,7 +17,6 @@ const useSignInStyles = makeStyles(theme => ({
     height: "calc(100% - (82px + 32px))",
     background: theme.palette.signIn.componentBackgroundImage,
     backgroundSize: "cover",
-    backgroundPosition: "bottom",
     // marginTop: "-1rem",
     //   overflow-y: hidden,
     "& .signin_main_wrapper": {

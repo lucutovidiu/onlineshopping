@@ -3,7 +3,7 @@ import styles from "./Carosel_JSS";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import "animate.css";
 import { animationArray, getRndInteger, setCurrentImage } from "./helper";
 
@@ -102,7 +102,9 @@ const CaroselIndex = ({ imageArray }) => {
             {currentImage.imgTitle.en}
           </Typography>
           <Typography className="see_more_btn">
-            See More &nbsp;
+            <Link href={currentImage.link}>
+              See More &nbsp;
+            </Link>
             <DoubleArrowIcon />
           </Typography>
         </div>

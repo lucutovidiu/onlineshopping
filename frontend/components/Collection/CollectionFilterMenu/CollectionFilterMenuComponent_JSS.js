@@ -30,7 +30,8 @@ export default makeStyles(theme => ({
     rightMenu_Wrapper: {
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "flex-end",
+        paddingRight: "1rem",
         height: "39px",
         width: "fit-content",
         marginTop: "0.5rem",
