@@ -2,30 +2,48 @@ import { makeStyles } from "@material-ui/styles"
 
 export default makeStyles(theme => ({
     menu_main_wrapper: {
+        position: "relative",
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        "@media all and (max-width: 599px)": {
+            height: "200px",
+            flexDirection: "column",
+            alignItems: "flex-start"
+        }
     },
     leftMenu_Wrapper: {
         display: "flex",
+        // border: "1px solid red",
         alignItems: "center",
-        height: "39px",
+        flexWrap: "wrap",
+        height: "41px",
         width: "fit-content",
         marginTop: "0.5rem",
         "& .subMenuItems": {
             position: "relative",
             display: "inline-block",
+        },
+        "@media all and (max-width: 599px)": {
+            width: "130px"
         }
     },
     rightMenu_Wrapper: {
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-around",
         height: "39px",
         width: "fit-content",
         marginTop: "0.5rem",
+        width: "180px",
         // border: "1px solid red",
         "& .product_qty": {
-            fontWeight: "bold"
+            fontWeight: "bold",
             // border: "1px solid red",
+        },
+        "@media all and (max-width: 599px)": {
+            // fontSize: "0.75rem",
+            width: "fit-content",
+            marginLeft: "0.5rem"
         }
     },
     default_custom_component: {

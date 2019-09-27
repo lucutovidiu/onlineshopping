@@ -28,9 +28,9 @@ export default withRouter(function Contact(props) {
                 }
 
             </Container>
-            {/* {
+            {
                 !checkVariableOfUndefined(props.router.query.name) && <FooterIndex />
-            } */}
+            }
         </>
     );
 })

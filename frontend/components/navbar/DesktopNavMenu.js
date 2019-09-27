@@ -10,6 +10,7 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import useDesktopStyles from "./Desktop_JSS_NavBar";
 import CollectionSubmenu from "./CollectionSubmenu/CollectionSubmenu";
+import uuidv1 from 'uuid/v1';
 
 const DesktopNavMenu = () => {
   const desktopClasses = useDesktopStyles();
@@ -40,7 +41,7 @@ const DesktopNavMenu = () => {
     <>
       <div className={desktopClasses.login_navbar_warpper}>
         {MenuLoginNavItems().map((link, key) => (
-          <Link key={key} href={link.navItemLink}>
+          <Link key={uuidv1()} href={link.navItemLink}>
             <a>{link.navItemName.en}</a>
           </Link>
         ))}
@@ -60,7 +61,7 @@ const DesktopNavMenu = () => {
               if (key === 1) {
                 return (
                   <div
-                    key={key}
+                    key={uuidv1()}
                     className={desktopClasses.navbar_collection_menu}
                     onMouseEnter={() => collectionMenu("SHOW")}
                   >
@@ -80,7 +81,7 @@ const DesktopNavMenu = () => {
               } else
                 return (
                   <Link
-                    key={key + Math.round(Math.random() * 6000)}
+                    key={uuidv1()}
                     href={link.navItemLink}
                   >
                     <a className={desktopClasses.nav_link}>

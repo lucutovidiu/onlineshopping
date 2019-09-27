@@ -101,7 +101,7 @@ const Discounts = () => {
       </Box>
       <div className={classes.disscountPageWrapper}>
         {mockMoreArticles.map(img => (
-          <MoreArticles key={img.id} img={img} />
+          <MoreArticles hasBorder={true} key={img.id} img={img} />
         ))}
       </div>
 

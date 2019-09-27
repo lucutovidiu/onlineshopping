@@ -72,7 +72,7 @@ const CollectionMenuItems = () => {
             }}
         >
             {mockMoreArticles.map(img => (
-                <MoreArticles key={img.id} img={img} />
+                <MoreArticles key={img.id} img={img} hasBorder={false} />
             ))}
         </div>
     )

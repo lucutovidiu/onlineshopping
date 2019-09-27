@@ -6,6 +6,7 @@ import ColorComponent from "./MenuItemsComponents/ColorComponent"
 import SortByComponent from "./MenuItemsComponents/SortByComponent"
 import useCollectionFilterMenuStyles from "./CollectionFilterMenuComponent_JSS"
 import uuidv1 from 'uuid/v1';
+import { Grid } from '@material-ui/core'
 
 const CollectionFilterMenu = () => {
     const [{ leftMenu }, { rightMenu }] = DesktopFilterMenuItems;
@@ -33,23 +34,23 @@ const CollectionFilterMenu = () => {
         switch (itemName.title) {
             case "SIZE": {
                 return (
-                    <SizeComponent menuIsOpen={menuIsOpen.SizeComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} key={uuidv1()} />
+                    <SizeComponent menuIsOpen={menuIsOpen.SizeComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} />
                 )
             }
             case "PRICE": {
                 return (
-                    <PriceComponent menuIsOpen={menuIsOpen.PriceComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} key={uuidv1()} />
+                    <PriceComponent menuIsOpen={menuIsOpen.PriceComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} />
                 )
             }
             case "COLOR": {
                 // console.log("sd")
                 return (
-                    <ColorComponent menuIsOpen={menuIsOpen.ColorComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} key={uuidv1()} />
+                    <ColorComponent menuIsOpen={menuIsOpen.ColorComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} />
                 )
             }
             case "SORTBY": {
                 return (
-                    <SortByComponent menuIsOpen={menuIsOpen.SortByComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} key={uuidv1()} />
+                    <SortByComponent menuIsOpen={menuIsOpen.SortByComponent} openComponentMenu={openComponentMenu} classes={classes} componentName={itemName} componentValues={itemValues} />
                 )
             }
             case "PRODUCTQUANTITY": {
@@ -69,7 +70,7 @@ const CollectionFilterMenu = () => {
         <div className={classes.menu_main_wrapper}>
             <div className={classes.leftMenu_Wrapper}>
                 {leftMenu.map((item, key) => {
-                    return renderMenuItem(item)
+                    return <Grid item key={uuidv1()} xs={12} sm={3} md={3} lg={3} xl={3}>{renderMenuItem(item)}</Grid>
                 })}
             </div>
             <div className={classes.rightMenu_Wrapper}>
