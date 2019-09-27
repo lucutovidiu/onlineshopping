@@ -20,7 +20,7 @@ export const DesktopFilterMenuItems = [
     {
         rightMenu: [
             {
-                itemName: { title: "PRODUCTQUANTITY", en: "Products quantity: ", ro: "Articole gasite: " },
+                itemName: { title: "PRODUCTQUANTITY", en: "Articles Found: ", ro: "Articole gasite: " },
                 itemValues: []
             }
         ]

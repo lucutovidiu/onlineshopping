@@ -70,12 +70,31 @@ const useMobileStyles = makeStyles(theme => ({
         flexDirection: "column",
         alignItems: "center",
         "& a": {
-          padding: "0.2rem 0"
+          padding: "0.2rem 0",
         },
-        "& a,& a:active": {
+        "& a,& a:active,& .navItem": {
           color: theme.palette.navBar.link,
-          textDecoration: "none"
+          textDecoration: "none",
+          fontSize: "1rem"
         }
+      },
+      "& .collection_submenu": {
+        "& .collection_submenu_cathegoryItems": {
+          marginLeft: "10px",
+          "& h4": {
+            margin: "5px 0"
+          },
+          "& ul": {
+            margin: "0",
+            paddingLeft: "5px",
+            "& li": {
+              listStyle: "none",
+              "& a": {
+                fontSize: "0.9rem",
+              }
+            }
+          }
+        },
       }
     },
     "& .shopping_cart_menu": {
@@ -120,7 +139,10 @@ const useMobileStyles = makeStyles(theme => ({
   },
   showMobileNav: {
     animation: "$animateDropDown 0.2s ease-out forwards"
-  }
+  },
+  navItem_links: {
+    marginLeft: "-4.2rem"
+  },
 }));
 
 export default useMobileStyles;

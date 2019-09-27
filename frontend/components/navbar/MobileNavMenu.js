@@ -8,6 +8,7 @@ import { Grid, Typography, Box } from "@material-ui/core";
 import LanguageIcon from "@material-ui/icons/Language";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import uuidv1 from 'uuid/v1';
 
 const MobileNavMenu = () => {
   const mobileClasses = useMobileStyles();
@@ -46,11 +47,41 @@ const MobileNavMenu = () => {
         >
           <Grid container className="dropDownMenu_containter">
             {MenuNavItems().map((link, key) => {
-              return (
-                <Link key={key} href={link.navItemLink}>
-                  <a>{link.navItemName.en}</a>
-                </Link>
-              );
+              if (key === 1) {
+                return (
+                  <div className="collection_submenu" key={uuidv1()}>
+                    <span className="navItem">{link.navItemName.en}</span>
+                    {
+                      link.submenu.map(submenu => {
+                        return (
+                          <div className="collection_submenu_cathegoryItems" key={uuidv1()}>
+                            <h4>{submenu.submenuTitle.en}</h4>
+                            <ul>
+                              {
+                                submenu.submenuItems.map(item => {
+                                  return <li key={uuidv1()}>
+                                    <Link href={item.submenuItem.link}>
+                                      <a>{item.submenuItem.title.en}</a>
+                                    </Link>
+                                  </li>
+                                })
+                              }
+                            </ul>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={uuidv1()} className={mobileClasses.navItem_links} >
+                    <Link href={link.navItemLink}>
+                      <a>{link.navItemName.en}</a>
+                    </Link>
+                  </div>
+                );
+              }
             })}
           </Grid>
           <Box onClick={toggleMenu} textAlign="center">
