@@ -31,7 +31,6 @@ const ShopByPicture = ({ pictureData }) => {
             {pictureData.btnName.en}
           </Typography>
         </div>
-        >
       </Link>
     </div>
 

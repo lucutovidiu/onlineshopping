@@ -1,6 +1,7 @@
 import React from "react";
 import { useCollectionSubmenuStyles } from "./CollectionSubmenu_JSS"
 import Link from "next/link";
+import uuidv1 from 'uuid/v1';
 
 export default function CollectionSubmenu({ submenu, isHidden, onEvent }) {
 
@@ -13,7 +14,7 @@ export default function CollectionSubmenu({ submenu, isHidden, onEvent }) {
     >
       {submenu.map(submenu => (
         <div
-          key={Math.round(Math.random() * 6000)}
+          key={uuidv1()}
           className="tooltip_main_content"
         >
           {submenu.submenuTitle.en}
