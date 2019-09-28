@@ -8,7 +8,7 @@ const mockPictures = [
     { id: 1, src: "/static/img/acticles/1/1.jpg", title: "dress1" },
     { id: 2, src: "/static/img/acticles/1/2.jpg", title: "dress2" },
     { id: 3, src: "/static/img/acticles/1/3.jpg", title: "dress3" },
-    { id: 4, src: "/static/img/acticles/1/5.jpg", title: "dress5" },
+    // { id: 4, src: "/static/img/acticles/1/5.jpg", title: "dress5" },
 ].map((item, key) => {
     if (key === 0) return { id: item.id, src: item.src, title: item.title, isDisplayed: true }
     else return { id: item.id, src: item.src, title: item.title, isDisplayed: false }
@@ -92,7 +92,7 @@ const ArticleImageGalery = () => {
                 }
                 <div onClick={() => handleNextPrevPictureSelect("PREV")} className="prev_picture_chevroux"><ArrowBackIosIcon /></div>
                 <div onClick={() => handleNextPrevPictureSelect("NEXT")} className="next_picture_chevroux"><ArrowForwardIosIcon /></div>
-                <div className="picture_number">Index : #1233453245</div>
+                <div className="picture_number">Article Number <b>#1233453245</b></div>
             </div>
         </div>
     )
