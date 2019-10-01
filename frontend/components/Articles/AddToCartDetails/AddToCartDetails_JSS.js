@@ -19,11 +19,18 @@ export const useAddToCartDetailsStyles = makeStyles(theme => ({
             fontSize: "0.9rem",
             textTransform: "uppercase",
             letterSpacing: "0.6px",
-            color: "rgba(80,40,40,1)"
+            color: "rgba(80,40,40,1)",
+        },
+        "& .articleSubTitle_size": {
+            paddingTop: "0.5rem",
         },
         "& .addToCartBtn": {
             backgroundColor: "rgba(0, 0, 0, 1)",
             color: "rgba(255,255,255,1)"
+        },
+        "& .rating_box": {
+            display: "flex",
+            paddingBottom: "0.8rem"
         }
     }
 }))
