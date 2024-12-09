@@ -3,8 +3,8 @@ const next = require("next");
 const express = require("express");
 const compression = require("compression");
 
-const dev = process.env.NODE_ENV.trim() != "production";
-const nextApp = next({ dev });
+// const dev = process.env.NODE_ENV.trim() != "production";
+const nextApp = next({ dev: true });
 const nextRoutesHandler = nextApp.getRequestHandler();
 const SERVER_PORT = process.env.PORT || 3000;
 
